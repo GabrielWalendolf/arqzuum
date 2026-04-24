@@ -37,13 +37,14 @@ export default function Header() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b"
       style={{
         background: 'var(--header-bg)',
         backdropFilter: scrolled ? 'blur(12px)' : 'blur(8px)',
+        borderColor: 'rgba(255,255,255,0.08)',
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="#"
           className="text-2xl font-bold tracking-widest"
@@ -99,8 +100,8 @@ export default function Header() {
 
       {menuOpen && (
         <div
-          className="md:hidden px-6 pb-6 flex flex-col gap-4"
-          style={{ background: 'var(--header-bg)' }}
+          className="md:hidden px-6 py-4 flex flex-col gap-4 border-t"
+          style={{ background: 'var(--header-bg)', borderColor: 'rgba(255,255,255,0.08)' }}
         >
           {navLinks.map((link) => (
             <button

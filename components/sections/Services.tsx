@@ -35,38 +35,38 @@ export default function Services({ id }: ServicesProps) {
     <section
       id={id}
       ref={ref}
-      className="py-24 px-6"
+      className="py-16 px-6"
       style={{ background: 'var(--card-bg)' }}
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <motion.h2
-          className="text-3xl md:text-5xl font-bold text-center mb-16"
+          className="text-3xl md:text-4xl font-bold mb-10"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--text)' }}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
+          transition={{ duration: 0.5, ease: 'easeOut' }}
         >
           Nossos Serviços
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              className="p-8 rounded-lg flex flex-col items-center text-center gap-4"
+              className="p-6 rounded-[10px] flex flex-col gap-4"
               style={{ background: 'var(--bg)' }}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.15 * (i + 1), ease: 'easeOut' }}
+              transition={{ duration: 0.5, delay: 0.12 * (i + 1), ease: 'easeOut' }}
             >
               <div
-                className="p-4 rounded-full"
+                className="p-3 rounded-[10px] w-fit"
                 style={{ background: 'var(--primary)', color: 'var(--accent-dark)' }}
               >
-                <service.icon size={28} />
+                <service.icon size={24} />
               </div>
               <h3
-                className="text-xl font-bold"
+                className="text-base font-semibold"
                 style={{ fontFamily: 'var(--font-playfair)', color: 'var(--text)' }}
               >
                 {service.title}

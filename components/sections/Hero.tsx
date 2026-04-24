@@ -15,11 +15,11 @@ export default function Hero() {
           url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1600&q=80') center/cover no-repeat`,
       }}
     >
-      <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
+      <div className="max-w-5xl mx-auto flex flex-col items-center gap-8">
         <motion.h1
           className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight tracking-wider"
           style={{ fontFamily: 'var(--font-playfair)', color: 'var(--text-light)' }}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
@@ -27,28 +27,26 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl max-w-2xl leading-relaxed opacity-90"
+          className="text-base md:text-lg max-w-2xl leading-relaxed opacity-90"
           style={{ fontFamily: 'var(--font-josefin)', color: 'var(--text-light)' }}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          transition={{ duration: 0.8, delay: 0.12, ease: 'easeOut' }}
         >
           Criamos espaços que inspiram e transformam a maneira como vivemos
         </motion.p>
 
         <motion.button
           onClick={handleCTA}
-          className="mt-2 px-10 py-4 text-sm font-semibold tracking-widest uppercase cursor-pointer transition-all duration-300"
+          className="mt-2 px-5 py-2.5 rounded-[10px] text-sm font-semibold tracking-widest uppercase cursor-pointer transition-opacity duration-200 hover:opacity-90"
           style={{
             fontFamily: 'var(--font-josefin)',
             color: 'var(--text-light)',
             background: 'var(--accent)',
-            border: '2px solid var(--accent)',
           }}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
-          whileHover={{ background: 'var(--btn-hover)', borderColor: 'var(--btn-hover)' }}
+          transition={{ duration: 0.8, delay: 0.24, ease: 'easeOut' }}
         >
           Inicie seu projeto
         </motion.button>

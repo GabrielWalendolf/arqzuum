@@ -10,24 +10,26 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer
-      className="py-12 px-6"
-      style={{ background: 'var(--accent-dark)' }}
+      className="border-t"
+      style={{ background: 'var(--accent-dark)', borderColor: 'rgba(255,255,255,0.08)' }}
     >
-      <div className="max-w-7xl mx-auto flex flex-col items-center gap-6 text-center">
-        <h2
-          className="text-3xl font-bold tracking-widest"
-          style={{ fontFamily: 'var(--font-playfair)', color: 'var(--text-light)' }}
-        >
-          ARQZUUM
-        </h2>
-        <p
-          className="text-sm tracking-wider opacity-70"
-          style={{ fontFamily: 'var(--font-josefin)', color: 'var(--text-light)' }}
-        >
-          Arquitetura, Urbanismo & Design de Interiores
-        </p>
+      <div className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between flex-wrap gap-4">
+        <div className="flex flex-col gap-1">
+          <span
+            className="text-xl font-bold tracking-widest"
+            style={{ fontFamily: 'var(--font-playfair)', color: 'var(--text-light)' }}
+          >
+            ARQZUUM
+          </span>
+          <span
+            className="text-xs opacity-60"
+            style={{ fontFamily: 'var(--font-josefin)', color: 'var(--text-light)' }}
+          >
+            © {new Date().getFullYear()} ARQZUUM. Todos os direitos reservados.
+          </span>
+        </div>
 
-        <div className="flex items-center gap-5 mt-2">
+        <div className="flex items-center gap-4">
           {socialLinks.map(({ label, icon: Icon, href }) => (
             <a
               key={label}
@@ -35,20 +37,13 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="p-2 rounded-full transition-opacity duration-200 hover:opacity-70"
+              className="transition-opacity duration-200 hover:opacity-60"
               style={{ color: 'var(--text-light)' }}
             >
-              <Icon size={20} />
+              <Icon size={18} />
             </a>
           ))}
         </div>
-
-        <p
-          className="text-xs opacity-50 mt-2"
-          style={{ fontFamily: 'var(--font-josefin)', color: 'var(--text-light)' }}
-        >
-          © 2025 ARQZUUM. Todos os direitos reservados.
-        </p>
       </div>
     </footer>
   )
