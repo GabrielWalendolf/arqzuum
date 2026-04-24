@@ -75,8 +75,8 @@ export default function Portfolio({ id }: PortfolioProps) {
                       <span
                         className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-[10px]"
                         style={{
-                          background: 'var(--primary)',
-                          color: 'var(--accent-dark)',
+                          background: 'var(--accent)',
+                          color: '#fff',
                           fontFamily: 'var(--font-josefin)',
                         }}
                       >

@@ -61,7 +61,7 @@ export default function Services({ id }: ServicesProps) {
             >
               <div
                 className="p-3 rounded-[10px] w-fit"
-                style={{ background: 'var(--primary)', color: 'var(--accent-dark)' }}
+                style={{ background: 'var(--accent)', color: '#fff' }}
               >
                 <service.icon size={24} />
               </div>
