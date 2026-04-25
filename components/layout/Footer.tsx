@@ -1,10 +1,8 @@
-import { Globe, Share2, Link, ExternalLink } from 'lucide-react'
-
 const socialLinks = [
-  { label: 'Instagram', icon: Globe, href: 'https://instagram.com' },
-  { label: 'Behance', icon: ExternalLink, href: 'https://behance.net' },
-  { label: 'LinkedIn', icon: Link, href: 'https://linkedin.com' },
-  { label: 'Pinterest', icon: Share2, href: 'https://pinterest.com' },
+  { label: 'Instagram', icon: '/icons/instagram.svg', href: 'https://instagram.com' },
+  { label: 'Behance', icon: '/icons/behance.svg', href: 'https://behance.net' },
+  { label: 'LinkedIn', icon: '/icons/linkedin.svg', href: 'https://linkedin.com' },
+  { label: 'Pinterest', icon: '/icons/pinterest.svg', href: 'https://pinterest.com' },
 ]
 
 export default function Footer() {
@@ -30,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-4">
-          {socialLinks.map(({ label, icon: Icon, href }) => (
+          {socialLinks.map(({ label, icon, href }) => (
             <a
               key={label}
               href={href}
@@ -38,9 +36,14 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label={label}
               className="transition-opacity duration-200 hover:opacity-60"
-              style={{ color: 'var(--text-light)' }}
             >
-              <Icon size={18} />
+              <img
+                src={icon}
+                alt={label}
+                width={18}
+                height={18}
+                style={{ filter: 'brightness(0) invert(1)' }}
+              />
             </a>
           ))}
         </div>
